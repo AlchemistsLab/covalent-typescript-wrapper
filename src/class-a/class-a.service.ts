@@ -1,6 +1,12 @@
 import { Injectable, HttpService } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { get } from 'lodash'
+
+/**
+ * Class A 
+ * endpoints that return enriched blockchain data applicable to all blockchain networks, 
+ * eg: balances, transactions, log events, etc.
+ */
 @Injectable()
 export class ClassAService {
   private key = ""
@@ -11,7 +17,7 @@ export class ClassAService {
     this.key = this.configService.get("COVALENT_HQ_API_KEY")
   }
   // GET {chain_id}/address/{address}/balances_v2/
-  public async getTokenBalanceForAddress(args: { chainId, address }, params) {
+  public async getTokenBalanceForAddress({ chainId, address }, params) {
     try {
       let parameters = {
         "nft": params.nft ? params.nft : false,
@@ -25,7 +31,7 @@ export class ClassAService {
         "skip": params.skip,
         "limit": params.limit
       }
-      const requestUrl = `/${args.chainId}/address/${args.address}/balances_v2/?key=${this.key}`
+      const requestUrl = `/${chainId}/address/${address}/balances_v2/?key=${this.key}`
       const response = await this.httpService
         .get(requestUrl, { params: { ...parameters } })
         .toPromise()
