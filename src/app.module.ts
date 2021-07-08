@@ -5,12 +5,14 @@ import { HttpExceptionFilter } from './common/http-exception.filter';
 import { TransformInterceptor } from './common/transform.interceptor';
 import { ClassAModule } from './class-a/class-a.module';
 import { ClassBModule } from './class-b/class-b.module';
+import { PricingModule } from './pricing/pricing.module';
 
 @Module({
   imports: [
     ClassAModule,
     ConfigModule.forRoot({ isGlobal: true }),
     ClassBModule,
+    PricingModule,
   ],
   providers: [{
     provide: APP_INTERCEPTOR,

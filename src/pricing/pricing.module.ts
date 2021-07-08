@@ -1,6 +1,6 @@
 import { HttpModule, Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { ClassBService } from './class-b.service';
+import { PricingService } from './pricing.service';
 
 @Module({
   imports: [HttpModule.registerAsync({
@@ -12,6 +12,6 @@ import { ClassBService } from './class-b.service';
     }),
     inject: [ConfigService],
   })],
-  providers: [ClassBService]
+  providers: [PricingService]
 })
-export class ClassBModule { }
+export class PricingModule { }
