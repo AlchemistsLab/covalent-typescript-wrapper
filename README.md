@@ -38,11 +38,19 @@ $ yarn test:cov
 
 ## Environment (.env file)
 
-COVALENT_HQ_API_KEY="covalent api key" #You can get free API key [here](https://www.covalenthq.com/platform/#/auth/register/)
+```bash
+COVALENT_HQ_API_KEY="covalent api key"
+```
 
+You can get free API key [here](https://www.covalenthq.com/platform/#/auth/register/)
+
+```bash
 HTTP_TIMEOUT=5000 #default api request timeout.
+```
 
+```bash
 HTTP_MAX_REDIRECTS=1 #default request max redirect.
+```
 
 ## Contributing
 
