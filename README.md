@@ -7,20 +7,40 @@ Covalent provides a unified API bringing visibility to billions of blockchain da
 Use the package manager [yarn](https://yarnpkg.com/) to install once you first clone.
 
 ```bash
-yarn
+$ yarn or npm install
 ```
 
-## Runing project
-
-```bash
-yarn start:dev
-```
-## Build project
-yarn build
+## Running the app
 
 ```bash
-yarn start:dev
+# development
+$ yarn start
+
+# watch mode
+$ yarn start:dev
+
+# production mode
+$ yarn start:prod
 ```
+
+## Test
+
+```bash
+# unit tests
+$ yarn test
+
+# e2e tests
+$ yarn test:e2e
+
+# test coverage
+$ yarn test:cov
+```
+
+## Environment (.env file)
+
+COVALENT_HQ_API_KEY="covalent api key" #You can get free API key [here](https://www.covalenthq.com/platform/#/auth/register/)
+HTTP_TIMEOUT=5000 #default api request timeout.
+HTTP_MAX_REDIRECTS=1 #default request max redirect.
 
 ## Contributing
 
