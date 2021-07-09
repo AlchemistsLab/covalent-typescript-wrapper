@@ -11,11 +11,7 @@ export class ExampleController {
   private getTokenBalanceForAddress(
     @Param() params: GetTokenBalanceForAddressParams,
     @Query() queryParams: GetTokenBalanceForAddressQueryParams) {
-    try {
-      const response = this.classAService.getTokenBalanceForAddress(params, queryParams)
-      return response
-    } catch (e) {
-      console.log(e)
-    }
+    const response = this.classAService.getTokenBalanceForAddress(params, queryParams)
+    return response
   }
 }
