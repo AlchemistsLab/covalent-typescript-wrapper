@@ -1,4 +1,4 @@
-import { HttpService, Injectable } from '@nestjs/common';
+import { BadRequestException, HttpService, Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { get } from 'lodash'
 @Injectable()
@@ -30,7 +30,7 @@ export class PricingService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 
@@ -53,7 +53,7 @@ export class PricingService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 
@@ -74,7 +74,7 @@ export class PricingService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 
@@ -95,7 +95,7 @@ export class PricingService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 }

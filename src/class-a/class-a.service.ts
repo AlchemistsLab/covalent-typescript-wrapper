@@ -1,3 +1,4 @@
+import { BadRequestException } from '@nestjs/common';
 import { Injectable, HttpService } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { get } from 'lodash'
@@ -37,7 +38,7 @@ export class ClassAService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 
@@ -60,7 +61,7 @@ export class ClassAService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 
@@ -87,7 +88,7 @@ export class ClassAService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 
@@ -113,7 +114,7 @@ export class ClassAService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 
@@ -136,7 +137,7 @@ export class ClassAService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 
@@ -161,7 +162,7 @@ export class ClassAService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 
@@ -188,7 +189,7 @@ export class ClassAService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 
@@ -217,7 +218,7 @@ export class ClassAService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 
@@ -243,7 +244,7 @@ export class ClassAService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 
@@ -266,7 +267,7 @@ export class ClassAService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 
@@ -291,7 +292,7 @@ export class ClassAService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 
@@ -316,7 +317,7 @@ export class ClassAService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 
@@ -341,7 +342,7 @@ export class ClassAService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 
@@ -367,7 +368,7 @@ export class ClassAService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 
@@ -380,7 +381,7 @@ export class ClassAService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 
@@ -393,7 +394,7 @@ export class ClassAService {
         .toPromise()
       return get(response, ["data", "data"], {})
     } catch (e) {
-      throw e
+      throw new BadRequestException(e.message)
     }
   }
 }

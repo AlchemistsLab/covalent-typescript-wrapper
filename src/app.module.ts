@@ -6,6 +6,7 @@ import { TransformInterceptor } from './common/transform.interceptor';
 import { ClassAModule } from './class-a/class-a.module';
 import { ClassBModule } from './class-b/class-b.module';
 import { PricingModule } from './pricing/pricing.module';
+import { ExampleModule } from './example/example.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { PricingModule } from './pricing/pricing.module';
     ConfigModule.forRoot({ isGlobal: true }),
     ClassBModule,
     PricingModule,
+    ExampleModule,
   ],
   providers: [{
     provide: APP_INTERCEPTOR,

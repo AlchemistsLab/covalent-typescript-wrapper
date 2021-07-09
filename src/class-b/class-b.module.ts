@@ -12,6 +12,7 @@ import { ClassBService } from './class-b.service';
     }),
     inject: [ConfigService],
   })],
-  providers: [ClassBService]
+  providers: [ClassBService],
+  exports: [ClassBService]
 })
 export class ClassBModule { }
